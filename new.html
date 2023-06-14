@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quiz game</title>
+  <link rel="stylesheet" href="homeStyle.css">
+
+</head>
+
+<body style=" background-image:url('quiz.jpeg');">
+  <div class="center">
+    <p>What is your name?</p>
+
+<input id="myInput" type="text" placeholder="Name"><br><br>
+<input id="age" type="number" placeholder="age"><br><br>
+<input id="gender" name="gender" type="radio" value="Female"> Female
+<input id="gender" name="gender" type="radio" value="Male"> Male<br><br>
+
+
+
+<button onclick="myFunction()">Answer</button>
+
+<p id="greeting"></p>
+<p id="storedName"></p>
+    <script> function myFunction() {
+    var name = document.getElementById("myInput").value;
+    var age = document.getElementById("age").value;
+    var gender = document.getElementById("gender").value;
+    document.getElementById("greeting").innerHTML = "Hello, " + gender + "! Welcome!";
+    
+    
+    localStorage.setItem("userName", name);
+    document.getElementById("storedName").innerHTML = localStorage.getItem("userName");
+
+    localStorage.setItem("userAge", age);
+    document.getElementById("storedAge").innerHTML = localStorage.getItem("userAge");
+    
+    localStorage.setItem("userGender", gender);
+    document.getElementById("storedGender").innerHTML = localStorage.getItem("userGender");
+  }
+    
+    </script>
+    <p id="userGender"></p>
+    <button id="myButton" class="float-left submit-button" >Continue</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "question.html";
+    };
+  
+</script>
+</div>
+    </body></html>
