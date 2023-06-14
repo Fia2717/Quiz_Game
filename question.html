@@ -1,0 +1,152 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="question.css">
+  <style>
+    div#infoDiv 
+    {
+     align-self: center;
+     text-align: center;
+    }
+    .info{
+      align-self: center;
+      text-align: center;
+      width:200px;
+      text-transform: capitalize;
+      border-width:2px;
+      border-style:solid;
+      border-color:#bccad6;
+    }
+    h2{
+      text-align: center;
+    }
+    hr.dotted{
+      border-top: 2px dotted;
+    }
+    p#Question{
+      margin-left: 5%;
+      text-align: left;
+      font-size: 20px;
+    }
+    p#answer{
+      margin-left: 15%;
+    }
+</style> 
+</head>
+<body>
+  <div id="infoDiv" class="infodivClass">
+  <p class="info">Name: <script>var name = localStorage.getItem("userName");  
+     document.write(name)</script></p>
+  <p id="name"></p>
+  <p class="info">Age: <script>var age = localStorage.getItem("userAge");  
+     document.write(age)</script></p>
+<p id="age"></p>
+<div>
+<h2>Quiz General knowledge</h2>
+</div>
+</div>
+<hr class="dotted"/>
+<div class="paper" id="paper">
+  <p id="Question"><b>Question no 1:</b>Bu Ali has been a source of medical information for  <input type="text" id="ans1"/></p>
+  <p id="answer">
+    <input type="radio" name="Q1" id="06 decades" value="06 decades" onclick="valueFunction()" class="A1"/><b>06 decades</b>
+    <input type="radio" name="Q1" id="06 centuries" value="06 centuries" onclick="valueFunction()" class="A1"/><b>06 centuries</b>
+    <input type="radio" name="Q1" id="06 years" value="06 years" onclick="valueFunction()"class="A1"/><b>06 years</b>
+    <input type="radio" name="Q1" id="60 years" value="60 years" onclick="valueFunction()"class="A1"/><b>60 years </b>
+   </p>
+   <script>
+   var A1 = document.querySelectorAll(".A1");
+var ans1 = document.getElementById("ans1");
+  
+function RadioB(e){
+	ans1.value = e.target.value;
+}
+
+A1.forEach(check => {
+	check.addEventListener("click", RadioB);
+});
+    </script>
+     <p id="Question"><b>Question no 2:</b>Ibn-e-Seena is the father of   <input type="text" id="ans2"/></p>
+     <p id="answer">
+       <input type="radio" name="Q2" id="Philosophy" value="Philosophy" onclick="valueFunction()" class="A2"/><b>Philosophy</b>
+       <input type="radio" name="Q2" id="Logic" value="Logic" onclick="valueFunction()" class="A2"/><b>Logic</b>
+       <input type="radio" name="Q2" id="Literature" value="Literature" onclick="valueFunction()"class="A2"/><b>Literature</b>
+       <input type="radio" name="Q2" id="Law" value="Law" onclick="valueFunction()"class="A2"/><b>Law </b>
+      </p>
+      <script>
+      var A2 = document.querySelectorAll(".A2");
+   var ans2 = document.getElementById("ans2");
+     
+   function RadioB(e){
+     ans2.value = e.target.value;
+   }
+   
+   A2.forEach(check => {
+     check.addEventListener("click", RadioB);
+   });
+       </script>
+
+<p id="Question"><b>Question no 3:</b>Tuberculosis is   <input type="text" id="ans3"/></p>
+<p id="answer">
+  <input type="radio" name="Q3" id="a book" value="a book" onclick="valueFunction()" class="A3"/><b>a book</b>
+  <input type="radio" name="Q3" id="a disease" value="a disease" onclick="valueFunction()" class="A3"/><b>a disease</b>
+  <input type="radio" name="Q3" id="a scientist" value="a scientist" onclick="valueFunction()"class="A3"/><b>a scientist</b>
+  <input type="radio" name="Q3" id="an instrument" value="an instrument" onclick="valueFunction()"class="A3"/><b>an instrument </b>
+ </p>
+ <script>
+ var A3 = document.querySelectorAll(".A3");
+var ans3 = document.getElementById("ans3");
+
+function RadioB(e){
+ans3.value = e.target.value;
+}
+
+A3.forEach(check => {
+check.addEventListener("click", RadioB);
+});
+  </script>
+
+
+<p id="Question"><b>Question no 4:</b>Meaning of subsequent is  <input type="text" id="ans4"/></p>
+     <p id="answer">
+       <input type="radio" name="Q4" id="Consequence" value="Consequence" onclick="valueFunction()" class="A4"/><b>Consequence</b>
+       <input type="radio" name="Q4" id="Ensuing" value="Ensuing" onclick="valueFunction()" class="A4"/><b>Ensuing</b>
+       <input type="radio" name="Q4" id="Old" value="Old" onclick="valueFunction()"class="A4"/><b>Old</b>
+       <input type="radio" name="Q4" id="Relevant" value="Relevant" onclick="valueFunction()"class="A4"/><b>Relevant </b>
+      </p>
+      <script>
+      var A4 = document.querySelectorAll(".A4");
+   var ans4 = document.getElementById("ans4");
+     
+   function RadioB(e){
+     ans4.value = e.target.value;
+   }
+   
+   A4.forEach(check => {
+     check.addEventListener("click", RadioB);
+   });
+       </script>
+
+
+<p id="Question"><b>Question no 5:</b>The people had no voice in affairs of the   <input type="text" id="ans5"/></p>
+     <p id="answer">
+       <input type="radio" name="Q5" id="Sports" value="Sports" onclick="valueFunction()" class="A5"/><b>Sports</b>
+       <input type="radio" name="Q5" id="Protest" value="Protest" onclick="valueFunction()" class="A5"/><b>Protest</b>
+       <input type="radio" name="Q5" id="State" value="State" onclick="valueFunction()"class="A5"/><b>State</b>
+       <input type="radio" name="Q5" id="Education" value="Education" onclick="valueFunction()"class="A5"/><b>Education </b>
+      </p>
+      <script>
+      var A5 = document.querySelectorAll(".A5");
+   var ans5 = document.getElementById("ans5");
+     
+   function RadioB(e){
+     ans5.value = e.target.value;
+   }
+   
+   A5.forEach(check => {
+     check.addEventListener("click", RadioB);
+   });
+       </script>
+</div>
+</body>
+</html> 
